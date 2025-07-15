@@ -176,7 +176,6 @@ public class HomePageController {
         openWindow("DeletedTasksView.fxml", "Deleted Tasks");
     }
 
-    // HomePageController.java ফাইলের শেষে এই নতুন মেথডটি যোগ করুন
     @FXML
     void handleFilterByDate() {
         try {
