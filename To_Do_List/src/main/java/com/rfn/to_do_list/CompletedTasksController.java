@@ -19,7 +19,6 @@ public class CompletedTasksController {
     @FXML
     private VBox taskContainer;
 
-    // চেকবক্স ও টাস্ক লিস্ট মনে রাখার জন্য
     private final List<CheckBox> taskCheckBoxes = new ArrayList<>();
     private final List<Task> currentCompletedTasks = new ArrayList<>();
 
@@ -58,7 +57,6 @@ public class CompletedTasksController {
         Label dateTimeLabel = new Label(formattedDateTime);
         infoBox.getChildren().addAll(titleLabel, descLabel, dateTimeLabel);
 
-        // পরিবর্তন এখানে: চেকবক্স যোগ করা হয়েছে
         CheckBox taskCheck = new CheckBox();
         taskCheckBoxes.add(taskCheck);
 
@@ -67,7 +65,6 @@ public class CompletedTasksController {
         return taskPane;
     }
 
-    // নতুন মেথড: ডিলেট করার জন্য
     @FXML
     private void handlePermanentDelete() {
         List<Task> tasksToDelete = new ArrayList<>();
@@ -84,7 +81,7 @@ public class CompletedTasksController {
 
         try {
             DatabaseService.permanentlyDeleteCompletedTasks(tasksToDelete);
-            loadCompletedTasks(); // তালিকা রিফ্রেশ করা
+            loadCompletedTasks(); 
         } catch (SQLException e) {
             e.printStackTrace();
             showAlert("Database Error", "Failed to permanently delete tasks.");
