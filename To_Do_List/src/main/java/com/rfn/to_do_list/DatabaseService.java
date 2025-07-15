@@ -57,7 +57,6 @@ public class DatabaseService {
         }
     }
 
-    // --- এই মেথডটির সম্পূর্ণ কোড এখানে দেওয়া হলো ---
     public static List<Task> getAllTasks() {
         String sql = "SELECT * FROM TO_DO_LIST ORDER BY TIME_AND_DATE_TO_BE_DONE ASC";
         List<Task> tasks = new ArrayList<>();
@@ -198,7 +197,6 @@ public class DatabaseService {
         }
     }
 
-    // এই নতুন মেথডটি DatabaseService.java ফাইলে যোগ করুন
 
     public static List<Task> getTasksBetween(LocalDateTime startDateTime, LocalDateTime endDateTime) {
         String sql = "SELECT * FROM TO_DO_LIST WHERE TIME_AND_DATE_TO_BE_DONE BETWEEN ? AND ? ORDER BY TIME_AND_DATE_TO_BE_DONE ASC";
