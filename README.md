@@ -23,4 +23,38 @@ A powerful search feature to filter and display all tasks that fall within a use
 Frontend: JavaFX
 Backend/Logic: Java
 Database: Oracle Database (with JDBC)
-Build Tool: Apache Maven
+Build Tool: Apache Maven (Intelij Idea)
+
+
+
+
+SQL Queries=>
+
+CREATE TABLE TO_DO_LIST (
+    TASK_ID NUMBER PRIMARY KEY,
+    TITLE VARCHAR2(255),
+    DESCRIPTION CLOB,
+    TIME_AND_DATE_TO_BE_DONE TIMESTAMP(6)
+);
+
+CREATE TABLE COMPLETED_TASK (
+    TASK_ID NUMBER PRIMARY KEY,
+    TITLE VARCHAR2(255),
+    DESCRIPTION CLOB,
+    COMPLETED_TIME_AND_DATE TIMESTAMP(6),
+    TIME_AND_DATE_TO_BE_DONE TIMESTAMP(6)
+);
+
+CREATE TABLE DELETED_TASK (
+    TASK_ID NUMBER PRIMARY KEY,
+    TITLE VARCHAR2(255),
+    DESCRIPTION CLOB,
+    DELETED_TIME_AND_DATE TIMESTAMP(6),
+    TIME_AND_DATE_TO_BE_DONE TIMESTAMP(6)
+);
+
+CREATE SEQUENCE task_id_sequence
+  START WITH 1
+  INCREMENT BY 1
+  NOCACHE
+  NOCYCLE;
