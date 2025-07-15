@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane hgap="10" vgap="15" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rfn.to_do_list.AddTaskDialogController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="titleField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextArea fx:id="descriptionArea" prefHeight="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="datePicker" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Time (hh:mm):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <HBox spacing="10" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <TextField fx:id="timeField" promptText="e.g., 02:30" prefWidth="150.0"/>
+        <ComboBox fx:id="ampmComboBox" prefWidth="90.0"/>
+    </HBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <padding>
+            <Insets top="20.0" />
+        </padding>
+        <Button onAction="#handleSave" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="✔ Save" />
+        <Button onAction="#handleCancel" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="❌ Cancel" />
+    </HBox>
+</GridPane>
