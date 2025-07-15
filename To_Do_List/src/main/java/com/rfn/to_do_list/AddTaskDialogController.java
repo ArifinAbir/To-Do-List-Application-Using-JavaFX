@@ -21,15 +21,14 @@ public class AddTaskDialogController {
     @FXML private TextArea descriptionArea;
     @FXML private DatePicker datePicker;
     @FXML private TextField timeField;
-    @FXML private ComboBox<String> ampmComboBox; // নতুন ComboBox
+    @FXML private ComboBox<String> ampmComboBox; 
 
     private Task taskToEdit;
 
-    // এই মেথডটি ডায়ালগ খোলার সাথে সাথে ComboBox-এ AM/PM যোগ করবে
     @FXML
     public void initialize() {
         ampmComboBox.setItems(FXCollections.observableArrayList("AM", "PM"));
-        ampmComboBox.getSelectionModel().selectFirst(); // ডিফল্ট হিসেবে AM সিলেক্ট থাকবে
+        ampmComboBox.getSelectionModel().selectFirst(); 
     }
 
     public void setTaskToEdit(Task task) {
@@ -40,7 +39,6 @@ public class AddTaskDialogController {
             LocalDateTime taskDateTime = task.getTaskTimestamp();
             datePicker.setValue(taskDateTime.toLocalDate());
 
-            // 12-ঘণ্টার ফরম্যাটে সময় দেখানো
             int hour = taskDateTime.getHour();
             String ampm = (hour < 12) ? "AM" : "PM";
             if (hour > 12) {
@@ -66,16 +64,14 @@ public class AddTaskDialogController {
         }
 
         try {
-            // "02:30" স্ট্রিং থেকে ঘণ্টা ও মিনিট আলাদা করা
             String[] timeParts = timeStr.split(":");
             int hour = Integer.parseInt(timeParts[0]);
             int minute = Integer.parseInt(timeParts[1]);
 
-            // AM/PM অনুযায়ী 24-ঘণ্টার ফরম্যাটে রূপান্তর
             if (ampm.equals("PM") && hour != 12) {
                 hour += 12;
             } else if (ampm.equals("AM") && hour == 12) {
-                hour = 0; // 12 AM মানে 00:00
+                hour = 0; 
             }
 
             LocalTime time = LocalTime.of(hour, minute);
