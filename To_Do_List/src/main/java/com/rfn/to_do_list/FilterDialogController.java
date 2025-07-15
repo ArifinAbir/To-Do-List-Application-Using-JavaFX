@@ -38,7 +38,6 @@ public class FilterDialogController {
                 return;
             }
 
-            // নতুন উইন্ডোতে ফলাফল দেখানোর কোড
             showFilteredTasksWindow(startDateTime, endDateTime);
 
         } catch (DateTimeParseException e) {
@@ -53,7 +52,6 @@ public class FilterDialogController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FilteredTasksView.fxml"));
         Parent root = loader.load();
 
-        // ফলাফল দেখানোর কন্ট্রোলারে start ও end সময় পাঠানো হচ্ছে
         FilteredTasksController controller = loader.getController();
         controller.loadTasksInInterval(start, end);
 
