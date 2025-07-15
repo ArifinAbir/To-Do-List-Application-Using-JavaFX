@@ -27,7 +27,6 @@ Build Tool: Apache Maven (Intelij Idea)
 
 
 
-
 SQL Queries=>
 
 CREATE TABLE TO_DO_LIST (
