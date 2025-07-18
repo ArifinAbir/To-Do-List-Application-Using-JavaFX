@@ -33,7 +33,7 @@ Whether you're a student managing assignments, a professional tracking meetings,
 
 - **Java** – Core logic and backend implementation
 - **JavaFX** – Rich GUI framework for building responsive desktop UI
-- **Oracle Database** – Robust backend to store all task data
+- **Oracle Database** – Robust backend to store all task data (XE)
 - **JDBC (Java Database Connectivity)** – Seamless connection between Java and Oracle DB
 - **Timers / Threads** – For scheduling notifications and alarms
 
