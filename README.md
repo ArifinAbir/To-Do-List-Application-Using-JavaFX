@@ -20,7 +20,7 @@ Whether you're a student managing assignments, a professional tracking meetings,
 
 - **Filter by Date**: View tasks scheduled for a specific date.
 - **Filter by Time**: Sort and display tasks based on their scheduled time.
-- **Homepage Overview**: Instantly see all your active tasks when the app launches.
+- **Homepage Overview**: Instantly see all your active tasks in ascending order based on date and time when the app launches.
 
 ### 🔔 Smart Notifications & Alarms
 
