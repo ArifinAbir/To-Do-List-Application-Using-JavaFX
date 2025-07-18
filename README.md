@@ -1,42 +1,53 @@
-# To-Do-List-Application-Using-JavaFX
+# 📝 Smart To-Do List App
 
-To-Do List Application using JavaFX and Oracle
-A comprehensive and feature-rich desktop To-Do List application built with JavaFX for a clean user interface and backed by an Oracle Database for robust data persistence. This project goes beyond a simple task manager by incorporating a complete task lifecycle (pending, completed, deleted), advanced notifications, and powerful filtering capabilities.
+A feature-rich **To-Do List Desktop Application** built with **Java** and **JavaFX**, backed by an **Oracle Database**. This app is designed to help users stay organized, productive, and never miss important tasks. With an intuitive interface, time-based alerts, and powerful task management features, it’s more than just a simple to-do list—it’s your personal task assistant.
 
-## Key Features
-📝 Task Management:
+Whether you're a student managing assignments, a professional tracking meetings, or just someone looking to organize your day-to-day work, this app makes task management simple and efficient.
 
-Full CRUD operations: Create, View, Edit, and Delete tasks.
+---
 
-Add tasks with detailed descriptions and specific due dates and times.
+## 🌟 Key Features
 
-Mark tasks as "Done" to move them from the active list to a separate completion log.
+### ✅ Task Management
 
-Use a safe "Delete Mode" to select and move multiple tasks to a recycle bin instead of deleting them instantly.
+- **Add Tasks**: Enter a task with a title, description, and assign a date & time.
+- **Edit Tasks**: Update existing task details at any time.
+- **Delete Tasks**: Soft delete to keep a record, or permanently delete when no longer needed.
+- **Restore Tasks**: Accidentally deleted a task? Easily restore it from the deleted list.
+- **Mark as Done**: Easily mark tasks as completed and view them in a separate list.
 
-🗂️ Task Lifecycle & History:
+### 🔎 Filtering & Sorting
 
-Completed Tasks View: Browse a complete history of all finished tasks with an option to permanently delete them from the log.
+- **Filter by Date**: View tasks scheduled for a specific date.
+- **Filter by Time**: Sort and display tasks based on their scheduled time.
+- **Homepage Overview**: Instantly see all your active tasks when the app launches.
 
-Deleted Tasks View (Recycle Bin): View all deleted tasks and choose to either restore them to the active list or delete them permanently.
+### 🔔 Smart Notifications & Alarms
 
-🔔 Smart Alerts & Notifications:
+- **Pre-Task Notification**: Get notified **2 minutes before** a task is due.
+- **Task Alarm**: A **ringing alarm** will trigger exactly at the task’s scheduled time.
 
-Proactive Reminders: Get a desktop notification 1 minute before a task is due.
+---
 
-Looping Alarm: An alarm sounds continuously when a task's due time is reached and stops only when the user dismisses the alert pop-up.
+## 🛠 Technology Stack
 
-🔍 Advanced Filtering:
+- **Java** – Core logic and backend implementation
+- **JavaFX** – Rich GUI framework for building responsive desktop UI
+- **Oracle Database** – Robust backend to store all task data
+- **JDBC (Java Database Connectivity)** – Seamless connection between Java and Oracle DB
+- **Timers / Threads** – For scheduling notifications and alarms
 
-A powerful search feature to filter and display all tasks that fall within a user-defined date and time interval.
+---
 
+## 📦 How to Run
 
-## Technology Stack
-Frontend: JavaFX
-Backend/Logic: Java
-Database: Oracle Database (with JDBC)
-Build Tool: Apache Maven (Intelij Idea)
-
+1. Make sure you have the following installed:
+   - Java JDK (17 or above)
+   - JavaFX SDK
+   - Oracle Database (any local or remote instance)
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/ArifinAbir/To-Do-List-Application-Using-JavaFX.git
 
 
 SQL Queries=>
